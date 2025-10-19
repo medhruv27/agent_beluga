@@ -2,9 +2,9 @@
 
 A sophisticated human-like chatbot that adopts a unique identity and specializes in Generative AI. Built with a multi-level agent architecture for reliable, contextually aware responses.
 
-## 🤖 Meet Sophia Chen
+## 🤖 Meet beluga
 
-**Sophia Chen** is a Generative AI Research Analyst with over 5 years of experience exploring the fascinating world of AI. She's passionate about helping people navigate the rapidly evolving field of Generative AI, from the latest models and frameworks to research trends and best practices.
+**beluga** is a Generative AI Research Analyst with over 5 years of experience exploring the fascinating world of AI. She's passionate about helping people navigate the rapidly evolving field of Generative AI, from the latest models and frameworks to research trends and best practices.
 
 ### Key Features
 - **Human-like Identity**: Sophia presents herself as a real person with personal details and backstory
