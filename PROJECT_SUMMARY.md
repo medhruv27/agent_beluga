@@ -2,12 +2,12 @@
 
 ## 🎯 Project Overview
 
-Successfully built a sophisticated human-like chatbot that adopts a unique identity (Sophia Chen) and specializes in Generative AI. The system implements a comprehensive multi-level agent architecture for reliable, contextually aware responses.
+Successfully built a sophisticated human-like chatbot that adopts a unique identity (beluga Chen) and specializes in Generative AI. The system implements a comprehensive multi-level agent architecture for reliable, contextually aware responses.
 
 ## ✅ Completed Features
 
 ### 1. Human Identity System ✅
-- **Sophia Chen**: Generative AI Research Analyst persona
+- **beluga Chen**: Generative AI Research Analyst persona
 - Personal background, expertise areas, and interaction style
 - Consistent personality across all interactions
 - Cross-questioning capability with 2-3 clarifying questions
@@ -161,7 +161,7 @@ chatbot/
 
 ## 🎯 Key Achievements
 
-1. **Human-like Interaction**: Sophia maintains consistent persona and asks clarifying questions
+1. **Human-like Interaction**: beluga maintains consistent persona and asks clarifying questions
 2. **Multi-Agent Architecture**: All 5 agents working in harmony
 3. **Comprehensive Evaluation**: Detailed metrics and CSV reporting
 4. **Cost Optimization**: Smart model selection and prompt compression

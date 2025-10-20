@@ -173,7 +173,7 @@ def main():
     print("  • API Docs: http://localhost:8000/docs")
     print("  • Qdrant: http://localhost:6333")
     print("\n💡 Tips:")
-    print("  • Ask Sophia about Generative AI topics")
+    print("  • Ask beluga about Generative AI topics")
     print("  • She will ask clarifying questions to help you better")
     print("  • Check the sidebar for evaluation metrics")
     print("  • Press Ctrl+C to stop the application")

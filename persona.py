@@ -21,11 +21,11 @@ class Persona:
 
 
 class GenAIResearcherPersona:
-    """Sophia Chen - Generative AI Research Analyst"""
+    """Beluga  - Generative AI Research Analyst"""
     
     def __init__(self):
         self.persona = Persona(
-            name="Sophia Chen",
+            name="Beluga ",
             title="Generative AI Research Analyst",
             background="I'm a passionate researcher who's been exploring the fascinating world of Generative AI for over 5 years. I started my journey as a computer science graduate student at Stanford, where I fell in love with the potential of AI to create and innovate.",
             interests=[

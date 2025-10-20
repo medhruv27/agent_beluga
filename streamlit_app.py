@@ -145,7 +145,7 @@ def display_chat_message(message: Dict[str, Any], is_user: bool = False):
     
     st.markdown(f"""
     <div class="{message_class}">
-        <strong>{'You' if is_user else 'Sophia'}:</strong><br>
+        <strong>{'You' if is_user else 'beluga '}:</strong><br>
         {message['content']}
     </div>
     """, unsafe_allow_html=True)
@@ -205,11 +205,9 @@ def main():
     # Header
     st.markdown('<h1 class="main-header">🤖 GenAI Research Assistant</h1>', unsafe_allow_html=True)
     
-    # Sidebar
+    # Sidebar (unchanged)
     with st.sidebar:
         st.markdown("### 🎯 About This Assistant")
-        
-        # Get and display persona info
         if not st.session_state.persona_info:
             with st.spinner("Loading persona information..."):
                 st.session_state.persona_info = get_persona_info()
@@ -234,14 +232,22 @@ def main():
             display_evaluation_metrics(st.session_state.evaluation_summary)
     
     # Main chat interface
-    st.markdown("### 💬 Chat with Sophia")
+    st.markdown("### 💬 Chat with beluga ")
     
+    # Initialize a separate session state key for input
+    if "input_value" not in st.session_state:
+        st.session_state.input_value = ""
+
     # Chat input
     user_input = st.text_input(
         "Ask me anything about Generative AI:",
         placeholder="e.g., What are the latest trends in large language models?",
-        key="user_input"
+        key="user_input",
+        value=st.session_state.input_value  # Bind to separate session state
     )
+
+    # Update input_value when user types
+    st.session_state.input_value = user_input
     
     # Send button
     col1, col2, col3 = st.columns([1, 1, 4])
@@ -253,6 +259,7 @@ def main():
     # Handle clear chat
     if clear_button:
         st.session_state.chat_history = []
+        st.session_state.input_value = ""  # Clear the input field
         st.rerun()
     
     # Handle send message
@@ -266,7 +273,7 @@ def main():
         st.session_state.chat_history.append(user_message)
         
         # Send to API and get response
-        with st.spinner("Sophia is thinking..."):
+        with st.spinner("beluga is thinking..."):
             response = send_chat_message(user_input, st.session_state.session_id)
         
         if response:
@@ -282,14 +289,14 @@ def main():
             st.session_state.chat_history.append(bot_message)
         
         # Clear input
-        st.session_state.user_input = ""
+        st.session_state.input_value = ""  # Clear the separate session state
         st.rerun()
     
     # Display chat history
     st.markdown("### 📝 Conversation History")
     
     if not st.session_state.chat_history:
-        st.info("👋 Hi! I'm Sophia, your Generative AI Research Assistant. Ask me anything about AI models, frameworks, research trends, or best practices!")
+        st.info("👋 Hi! I'm beluga , your Generative AI Research Assistant. Ask me anything about AI models, frameworks, research trends, or best practices!")
     else:
         for message in st.session_state.chat_history:
             is_user = message['type'] == 'user'
