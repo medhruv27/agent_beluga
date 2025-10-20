@@ -25,39 +25,39 @@ st.markdown("""
     .main-header {
         font-size: 2.5rem;
         font-weight: bold;
-        color: #1f77b4;
+        color: #d32f2f;
         text-align: center;
         margin-bottom: 2rem;
     }
     .persona-card {
-        background-color: #f0f2f6;
+        background-color: #e0f7fa;
         padding: 1rem;
         border-radius: 10px;
         margin: 1rem 0;
     }
     .message-user {
-        background-color: #e3f2fd;
+        background-color: #bbdefb;
         padding: 1rem;
         border-radius: 10px;
         margin: 0.5rem 0;
-        border-left: 4px solid #2196f3;
+        border-left: 4px solid #1976d2;
     }
     .message-bot {
-        background-color: #f3e5f5;
+        background-color: #ce93d8;
         padding: 1rem;
         border-radius: 10px;
         margin: 0.5rem 0;
-        border-left: 4px solid #9c27b0;
+        border-left: 4px solid #7b1fa2;
     }
     .source-item {
-        background-color: #fff3e0;
+        background-color: #ffe0b2;
         padding: 0.5rem;
         border-radius: 5px;
         margin: 0.25rem 0;
         font-size: 0.9rem;
     }
     .metric-card {
-        background-color: #e8f5e8;
+        background-color: #c8e6c9;
         padding: 1rem;
         border-radius: 10px;
         text-align: center;
