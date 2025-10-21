@@ -32,8 +32,8 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     
     # Model Settings
-    primary_llm: str = "gemini-pro"  # For complex queries
-    secondary_llm: str = "gemini-pro"  # For simple tasks
+    primary_llm: str = "gemini-2.0-flash"  # For complex queries
+    secondary_llm: str = "gemini-2.0-flash"  # For simple tasks
     embedding_model: str = "models/gemini-embedding-001"  # Gemini embedding model
     
     # Memory Settings

@@ -9,6 +9,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import logging
 from datetime import datetime
+from config import settings
+print(settings.google_api_key)  # Should print your Gemini API key if loaded correctly
 
 # Import agents
 from agents import (

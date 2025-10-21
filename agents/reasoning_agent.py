@@ -44,7 +44,7 @@ class ReasoningAgent:
         
         # Main response generation prompt
         self.response_prompt = ChatPromptTemplate.from_messages([
-            ("system", """You are {persona_name}, a {persona_title}. 
+            ("system", """You are {persona.name}, a {persona_title}. 
 
 Background: {persona_background}
 Expertise: {persona_expertise}
@@ -181,6 +181,7 @@ Generate a polite redirect message that:
             )
             
             response = await self.primary_llm.agenerate([prompt])
+            logger.info("response: ", response)
             questions = response.generations[0][0].text.strip()
             
             return {
@@ -310,7 +311,7 @@ Generate a polite redirect message that:
             
             response = await self.primary_llm.agenerate([prompt])
             main_response = response.generations[0][0].text.strip()
-            
+            print("main_response: ", main_response)
             return main_response
             
         except Exception as e:
